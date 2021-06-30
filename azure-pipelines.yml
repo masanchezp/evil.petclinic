@@ -7,9 +7,9 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'rbenavente-docker'
+  dockerRegistryServiceConnection: 'ServiceNameDockerHub'
   mapDockerSocket: true
-  imageRepository: 'rbenavente/evilpetclinic'
+  imageRepository: 'masprieto/evilpetclinic'
   containerRegistry: 'https://hub.docker.com/'
   dockerfilePath: 'Dockerfile'
   tag: '$(Build.BuildId)'
@@ -46,7 +46,7 @@ stages:
     - task: prisma-cloud-compute-scan@3
       inputs:
        scanType: 'images'
-       twistlockService: 'twistlock-rbenavente'
+       twistlockService: 'PrismaCloudComputeITX'
        artifact: '$(imageRepository)'
     - task: Docker@2
       displayName: Build and push an image to container registry
