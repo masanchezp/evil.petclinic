@@ -7,7 +7,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'ServiceNameDockerHub'
+  dockerRegistryServiceConnection: 'DockerHub'
   mapDockerSocket: true
   imageRepository: 'masprieto/evilpetclinic'
   containerRegistry: 'https://hub.docker.com/'
