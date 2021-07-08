@@ -9,7 +9,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'ServiceNameDockerHub'
   mapDockerSocket: true
-  imageRepository: 'masprieto/vulnerable'
+  imageRepository: 'masprieto/vulnerable:evil-plus'
   containerRegistry: 'https://hub.docker.com/'
   dockerfilePath: 'Dockerfile'
   tag: '$(Build.BuildId)'
