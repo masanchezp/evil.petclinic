@@ -55,7 +55,7 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        tags: latest
+        #tags: latest
 
 ##    - task: Prisma Cloud IaC Scan@3
 #      inputs:
