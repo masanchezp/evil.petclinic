@@ -48,13 +48,13 @@ stages:
        scanType: 'images'
        twistlockService: 'PrismaCloudComputeITX'
        artifact: '$(imageRepository)'
-    - task: Docker@2
-      displayName: Build and push an image to container registry
-      inputs:
-        command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
+   ## - task: Docker@2
+   #   displayName: Build and push an image to container registry
+   #   inputs:
+   #     command: buildAndPush
+   #     repository: $(imageRepository)
+   #     dockerfile: $(dockerfilePath)
+   #     containerRegistry: $(dockerRegistryServiceConnection)
         #tags: latest
 
 ##    - task: Prisma Cloud IaC Scan@3
